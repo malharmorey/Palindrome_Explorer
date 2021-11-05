@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Style Sheets/style.css">
+    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+
+    <title>Explore-Palindrome</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+
+            <span id="heading">Palindrome-Card</span>
+
+            <p id="para">Hey there! Check wheather your Name, Special date or any Phrase is Palindrome?<br>
+                A palindrome is a word/number which reads the same backward as forward.
+            </p>
+
+            <input type="text" id="myInput" onkeydown="if (event.keyCode == 13)
+            document.getElementById('btn').click()" placeholder="Name/ dd-mm-yyyy">
+
+            <button id="btn" onclick="checkPalindrome()">Check</button>
+
+            <p id="result"></p>
+
+        </div>
+    </div>
+    <script src="Js/script.js"></script>
+    <script type="text/javascript" src="/Js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400
+        });
+
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
+
+</body>
+
+</html>

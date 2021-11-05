@@ -1,0 +1,137 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+/* CONTAINER  */
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background: url(../images/bg4.jpg);
+    background-position-y:center;
+    background-size: cover;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card{
+    /* border: 1px solid rgba(255, 255, 255, 0.5); */
+    border-radius: 20px;
+    min-height: 380px;
+    height: 65%;
+    width: 55%; 
+    z-index: 1;
+    backdrop-filter: blur(12px);
+    background-color: rgba(205, 205, 205, 0.2); 
+    -webkit-backdrop-filter: blur(8px);
+    display: grid;
+    grid-auto-rows: 1fr 1.2fr 1fr 1fr 1.2fr;
+    overflow:hidden;
+}
+#heading{
+    font-family: 'Signika', sans-serif;
+    font-size: 3.5rem;
+    justify-self: center;
+    align-self:flex-end;
+    text-align: center;
+}
+#para{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    align-self:center;
+    padding: 2px 4px;
+}
+#myInput{
+    height: 3.3rem;
+    width: 18rem;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    border-radius: 2.3rem;
+    text-align: center;
+    color: black;
+}
+#btn{
+    height: 3rem;
+    width: 9rem;
+    justify-self: center;
+    border: none;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: #0072ff;
+    transition: all 80ms ease-in-out 0s;
+
+}
+#btn:hover{
+    background-color: #0066e2; 
+}
+#result{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-self: center;
+    align-self:flex-start;
+    color:#0073ff; 
+}
+
+
+/* Media Queries */
+@media screen  and (max-width: 768px){
+.card{
+    height: 60%;
+    width: 85%;
+    min-height: 416px;
+    min-width: 260px;
+}
+#heading{
+    font-size: 2.5rem;
+    padding: 0.5rem 0rem;
+}
+#para{
+    font-size: 1rem;
+    padding: 0px 5px;
+}
+#myInput{
+    height: 3rem;
+    width: 15rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+}
+#btn{
+    height: 2.8rem;
+    width: 8rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+}
+#result{
+    font-size: 1.2rem ;
+    /* If some one wrote long phrase then the result overflows the card: FIX it */
+}
+}
