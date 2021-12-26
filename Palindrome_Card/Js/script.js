@@ -4,9 +4,6 @@ function checkPalindrome() {
     let reverseJoin = replaceSpecialChar.split("").reverse().join("");
     document.getElementById("myInput").value = "";
 
-    // console.log(replace);
-    // console.log(reverseJoin);
-
     if(replaceSpecialChar == ""){
         alert('Input should NOT be empty!');
     } else if(replaceSpecialChar.length <=2){
